@@ -5,7 +5,20 @@ import './styles/shared.sass'
 function App() {
   return (
     <div className={"home--container"}>
-        <h1>Website development in progress<span style={{color: "lightgreen"}}>.</span> 🚧</h1>
+      <div id='main-section' className='main--section'>
+        <h3>
+          Welcome to grape
+        </h3>
+        <h1>
+          An ICT for sustainability project run by students
+        </h1>
+        <div>
+          
+        </div>
+      </div>
+      <div id='content-section'>
+        B
+      </div>
     </div>
   );
 }
