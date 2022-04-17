@@ -66,15 +66,16 @@ function App() {
         </div>
         <div className={"card--type3 card"}>
           <h2>Contact</h2>
-            <form  name="contact" method="POST" data-netlify="true" action={"/?success=true"} className={"form--container"}>
+            <form name="contact" method="POST" data-netlify="true" className={"form--container"}>
+                <input type="hidden" hidden name="form-name" value="contact" />
                 <div>
-                    <CssTextField id="standard-basic" label="Name" variant="standard" />
+                    <CssTextField id="standard-basic" label="Name" name={"name"} variant="outlined" />
                 </div>
                 <div>
-                    <CssTextField id="standard-basic" type={"email"} label="Email" variant="standard" />
+                    <CssTextField id="standard-basic" type={"email"} label="Email" name={"email"} variant="outlined" />
                 </div>
                 <div>
-                    <CssTextField id="standard-basic" type={"text"} multiline rows={4} label="Message" variant="standard" />
+                    <CssTextField id="standard-basic" type={"text"} multiline rows={4} name={"message"} label="Message"  variant="outlined" />
                 </div>
                 <div style={{width: "80px", float: "right", paddingRight: "40px"}}>
                     <SendButton />
