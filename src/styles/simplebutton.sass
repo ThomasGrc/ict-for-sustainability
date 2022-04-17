@@ -1,0 +1,49 @@
+@use 'shared'
+@use 'colors'
+
+button
+  padding: 10px 30px
+  cursor: pointer
+  font-family: inherit
+  display: inline-block
+  width: fit-content
+  margin-right: 30px
+  position: relative
+  overflow: hidden
+  border: 2px solid #4E8A4A
+  transition: color .5s
+  z-index: 1
+  font-size: 17px
+  border-radius: 6px
+  color: #4E8A4A
+  -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.8)
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.8)
+
+button:before
+  content: ""
+  position: absolute
+  z-index: -1
+  background: #4E8A4A
+  height: 150px
+  width: 250px
+  border-radius: 50%
+
+
+button:hover
+  color: #fff
+
+
+button:before
+  top: 100%
+  left: 100%
+  transition: all .7s
+
+
+button:hover:before
+  top: -30px
+  left: -30px
+
+
+button:active:before
+  background: #4E8A4A
+  transition: background 0s

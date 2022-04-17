@@ -3,6 +3,7 @@
 $md: 764px
 $lg: 1200px
 $top-level: 2000
+$maxWidth: 1000px
 
 div
   font-family: junegull, sans-serif
@@ -14,24 +15,42 @@ h1
   font-family: cubano, sans-serif
   font-weight: 400
   font-style: normal
-  font-size: 50px
+  font-size: 40px
 
 h2
   font-family: cubano, sans-serif
   font-weight: 400
   font-style: normal
+  color: #182D17
 
 h3
-  font-family: cubano, sans-serif
+  font-family: junegull, sans-serif
   font-weight: 400
   font-style: normal
   color: colors.$primary
   font-size: 30px
+  margin: 0
+
+p
+  font-family: montserrat, sans-serif
+  font-weight: 400
+  font-style: normal
+  color: #182D17
+  font-size: 18px
+  line-height: 40px
 
 @media (min-width: $md)
   div
     color: white
+  h1
+    font-size: 45px
+  p
+    font-size: 20px
 
 @media (min-width: $lg)
   div
     color: white
+  h1
+    font-size: 50px
+  p
+    font-size: 22px

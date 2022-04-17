@@ -2,20 +2,34 @@
 @use 'colors'
 
 .menu--logo
-    position: fixed
+    width: 100vw
+    position: sticky
     z-index: shared.$top-level
     top: 3%
-    left: 2%
+    padding-left: 30px
     font-size: 50px
 
 .menu--logo span
     color: colors.$primary
 
 .menu--instagram
-    font-family: montserrat
-    position: fixed
-    z-index: shared.$top-level
-    right: 1%
-    top: 50%
-    transform: rotate(-90deg)
-    font-size: 35px
+    display: none
+
+@media (min-width: shared.$md)
+    .menu--instagram
+        font-family: montserrat, sans-serif
+        font-weight: 600
+        font-style: normal
+        display: flex
+        align-items: center
+        position: sticky
+        z-index: shared.$top-level
+        top: 50%
+        float: right
+        margin-right: -7%
+        transform: rotate(-90deg)
+        font-size: 30px
+
+@media (min-width: shared.$lg)
+    .menu--instagram
+        margin-right: 0%

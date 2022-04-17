@@ -1,18 +1,59 @@
 @use 'styles/shared'
 
 .home--container
-  width: 100vw
   min-height: 100vh
-  display: flex
-  flex-direction: column
-  justify-content: center
-  backdrop-filter: blur(3px)
-  background-color: rgba(255, 255, 255, 0.6)
+  max-width: shared.$maxWidth
 
 .main--section
-  width: 40%
-  padding-left: 20%
-  height: 100vh
+  width: 100vw
+  height: 90vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+.main--content
+  width: 90%
+  max-width: shared.$maxWidth
+
+.card
+  max-width: shared.$maxWidth
+  background-color: #F5F3EF
+  width: 90%
+  margin: 2% 0
+  padding: 2%
+  border-radius: 5px
+  -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.6)
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.6)
+
+.card--type1
+  content: ""
+
+.card--type2
+  content: ""
+
+.card--type3
+  text-align: right
+
+.form--container div
+  width: 100%
+
+.content--container
+  width: 100vw
   display: flex
   flex-direction: column
+  align-items: center
   justify-content: center
+
+
+@media (min-width: shared.$md)
+  .main--content
+    width: 70%
+  .card
+    width: 70%
+
+@media (min-width: shared.$lg)
+  .main--content
+    width: 50%
+  .card
+    width: 60%
+
