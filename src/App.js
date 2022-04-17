@@ -1,5 +1,5 @@
 import './App.sass';
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './styles/shared.sass'
 import {SendButton, SimpleButton} from "./components/SimpleButton";
 import {TextField} from "@mui/material";
@@ -35,6 +35,16 @@ const CssTextField = styled(TextField)({
 });
 
 function App() {
+
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(!open);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
   return (
     <div className={"home--container"}>
       <div id='main-section' className='main--section'>
@@ -66,7 +76,9 @@ function App() {
         </div>
         <div className={"card--type3 card"}>
           <h2>Contact</h2>
-            <form name="contact-form" method="POST" data-netlify="true" action="/contact?success=true" className={"form--container"}>
+            <form onSubmit={() => {
+                setOpen(true)
+            }}  name="contact" method="POST" data-netlify="true" action={"/?success=true"} className={"form--container"}>
                 <div>
                     <CssTextField id="standard-basic" label="Name" variant="standard" />
                 </div>
