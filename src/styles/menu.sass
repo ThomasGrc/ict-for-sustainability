@@ -3,6 +3,7 @@
 
 .menu--logo
     width: 100vw
+    color: colors.$primary
     position: sticky
     z-index: shared.$top-level
     top: 3%
@@ -13,7 +14,14 @@
     color: colors.$primary
 
 .menu--instagram
+    cursor: pointer
+    color: colors.$primary
+    transition: all .6s
     display: none
+
+.menu--instagram:hover
+    letter-spacing: 10px
+    margin-left: -30px
 
 @media (min-width: shared.$md)
     .menu--instagram
@@ -29,7 +37,10 @@
         margin-right: -7%
         transform: rotate(-90deg)
         font-size: 30px
-
+    .menu--instagram:hover
+        margin-right: -120px
 @media (min-width: shared.$lg)
     .menu--instagram
         margin-right: 0%
+    .menu--instagram:hover
+        margin-right: -45px
