@@ -66,7 +66,7 @@ function App() {
         </div>
         <div className={"card--type3 card"}>
           <h2>Contact</h2>
-            <form name="contact" method="POST" data-netlify="true" className={"form--container"}>
+            <form name="contact" method="POST" className={"form--container"}>
                 <input type="hidden" hidden name="form-name" value="contact" />
                 <div>
                     <CssTextField id="standard-basic" label="Name" name={"name"} variant="outlined" />
