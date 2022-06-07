@@ -5,6 +5,17 @@ $lg: 1200px
 $top-level: 2000
 $maxWidth: 1000px
 
+a
+  color: colors.$primary
+  font-family: montserrat, sans-serif
+  cursor: pointer
+
+a:hover
+  text-decoration: underline 1px colors.$primary
+
+.cursor-extern
+  cursor: alias
+
 div
   font-family: junegull, sans-serif
   font-weight: 400
@@ -39,6 +50,18 @@ p
   color: #182D17
   font-size: 16px
   line-height: 30px
+
+.d-flex
+  display: flex
+
+.justify-center
+  justify-content: center
+
+.align-center
+  align-items: center
+
+.direction-column
+  flex-direction: column
 
 @media (min-width: $md)
   div

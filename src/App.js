@@ -81,7 +81,10 @@ function App() {
                     </h1>
                     <div>
                         <SimpleButton content={"About us"} onClick={() => { }} />
-                        <SimpleButton content={"Contact us"} onClick={() => { }} />
+                        <SimpleButton className={"cursor-extern"} content={"Contact us"} onClick={() => {
+                            const el = document.getElementById("contact")
+                            el.scrollIntoView()
+                        }} />
                     </div>
                 </div>
             </div>
@@ -92,7 +95,7 @@ function App() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                    <div className={"card"}>
+                    <div className={"card d-flex align-center direction-column"}>
                         <h2>GOALS</h2>
                         <div className={"goals--container"}>
                             <img src={Goal1}/>
@@ -113,6 +116,7 @@ function App() {
                             <img src={Goal16}/>
                             <img src={Goal17}/>
                         </div>
+                        <SimpleButton content={"More info"} onClick={() => window.open("https://www.un.org/sustainabledevelopment/sustainable-development-goals/")}></SimpleButton>
                     </div>
                 <div className={"card"}>
                     <h2>RAISING AWARENESS</h2>
@@ -120,7 +124,7 @@ function App() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                <div className={"card"}>
+                <div id={"contact"} className={"card"}>
                     <h2>Contact</h2>
                     <form name="contact" onSubmit={onFormSubmit} className={"form--container"}>
                         <input type="hidden" hidden name="form-name" value="contact" />

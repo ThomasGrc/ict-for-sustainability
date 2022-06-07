@@ -1,8 +1,8 @@
 import "../styles/simplebutton.sass"
 import "../styles/sendbutton.sass"
 
-export function SimpleButton({content, onClick}) {
-    return <button onClick={onClick}>
+export function SimpleButton({className, content, onClick}) {
+    return <button className={className} onClick={onClick}>
         {content}
     </button>
 }
