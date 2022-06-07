@@ -5,6 +5,25 @@ import { SendButton, SimpleButton } from "./components/SimpleButton";
 import { TextField } from "@mui/material";
 import styled from "@emotion/styled";
 
+import Goal1 from "./goals/E-WEB-Goal-01.png"
+import Goal2 from "./goals/E-WEB-Goal-02.png"
+import Goal3 from "./goals/E-WEB-Goal-03.png"
+import Goal4 from "./goals/E-WEB-Goal-04.png"
+import Goal5 from "./goals/E-WEB-Goal-05.png"
+import Goal6 from "./goals/E-WEB-Goal-06.png"
+import Goal7 from "./goals/E-WEB-Goal-07.png"
+import Goal8 from "./goals/E-WEB-Goal-08.png"
+import Goal9 from "./goals/E-WEB-Goal-09.png"
+import Goal10 from "./goals/E-WEB-Goal-10.png"
+import Goal11 from "./goals/E-WEB-Goal-11.png"
+import Goal12 from "./goals/E-WEB-Goal-12.png"
+import Goal13 from "./goals/E-WEB-Goal-13.png"
+import Goal14 from "./goals/E-WEB-Goal-14.png"
+import Goal15 from "./goals/E-WEB-Goal-15.png"
+import Goal16 from "./goals/E-WEB-Goal-16.png"
+import Goal17 from "./goals/E-WEB-Goal-17.png"
+
+
 const CssTextField = styled(TextField)({
     '& .MuiFormLabel-root': {
         color: "#4E8A4A",
@@ -67,30 +86,52 @@ function App() {
                 </div>
             </div>
             <div id='content-section' className={"content--container"}>
-                <div className={"card--type1 card"}>
+                <div className={"card"}>
                     <h2>RAISING AWARENESS</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                <div className={"card--type2 card"}>
+                    <div className={"card"}>
+                        <h2>GOALS</h2>
+                        <div className={"goals--container"}>
+                            <img src={Goal1}/>
+                            <img src={Goal2}/>
+                            <img src={Goal3}/>
+                            <img src={Goal4}/>
+                            <img src={Goal5}/>
+                            <img src={Goal6}/>
+                            <img src={Goal7}/>
+                            <img src={Goal8}/>
+                            <img src={Goal9}/>
+                            <img src={Goal10} />
+                            <img src={Goal11}/>
+                            <img src={Goal12}/>
+                            <img src={Goal13}/>
+                            <img src={Goal14}/>
+                            <img src={Goal15}/>
+                            <img src={Goal16}/>
+                            <img src={Goal17}/>
+                        </div>
+                    </div>
+                <div className={"card"}>
                     <h2>RAISING AWARENESS</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                <div className={"card--type3 card"}>
+                <div className={"card"}>
                     <h2>Contact</h2>
                     <form name="contact" onSubmit={onFormSubmit} className={"form--container"}>
                         <input type="hidden" hidden name="form-name" value="contact" />
                         <div>
-                            <CssTextField id="standard-basic" label="Name" name={"name"} variant="outlined" />
+                            <CssTextField required id="standard-basic" label="Name" name={"name"} variant="outlined" />
                         </div>
                         <div>
-                            <CssTextField id="standard-basic" type={"email"} label="Email" name={"email"} variant="outlined" />
+                            <CssTextField required id="standard-basic" type={"email"} label="Email" name={"email"} variant="outlined" />
                         </div>
                         <div>
-                            <CssTextField id="standard-basic" type={"text"} multiline rows={4} name={"message"} label="Message" variant="outlined" />
+                            <CssTextField required id="standard-basic" type={"text"} multiline rows={4} name={"message"} label="Message" variant="outlined" />
                         </div>
                         <div style={{ width: "80px", float: "right", paddingRight: "40px" }}>
                             <SendButton />
