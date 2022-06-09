@@ -1,5 +1,5 @@
 import './App.sass';
-import React from "react";
+import React, {useState} from "react";
 import './styles/shared.sass'
 import { SendButton, SimpleButton } from "./components/SimpleButton";
 import { TextField } from "@mui/material";
@@ -54,6 +54,8 @@ const CssTextField = styled(TextField)({
 });
 
 function App() {
+    const [sent, setSent] = useState(false);
+
     const onFormSubmit = async (evt) => {
         evt.preventDefault();
         await fetch("/", {
@@ -67,7 +69,9 @@ function App() {
                 "email": evt.target["email"].value,
                 "message": evt.target["message"].value
             })
-        }).catch((error) => console.error(error))
+        }
+        ).catch((error) => console.error(error))
+        setSent(true)
     }
     return (
         <div className={"home--container"}>
@@ -80,8 +84,11 @@ function App() {
                         An ICT for sustainability project run by students
                     </h1>
                     <div>
-                        <SimpleButton content={"About us"} onClick={() => { }} />
-                        <SimpleButton className={"cursor-extern"} content={"Contact us"} onClick={() => {
+                        <SimpleButton content={"Our project"} onClick={() => {
+                            const el = document.getElementById("content-section")
+                            el.scrollIntoView()
+                        }} />
+                        <SimpleButton content={"Contact us"} onClick={() => {
                             const el = document.getElementById("contact")
                             el.scrollIntoView()
                         }} />
@@ -90,12 +97,12 @@ function App() {
             </div>
             <div id='content-section' className={"content--container"}>
                 <div className={"card"}>
-                    <h2>RAISING AWARENESS</h2>
+                    <h2>Our project</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     </p>
                 </div>
-                    <div className={"card d-flex align-center direction-column"}>
+                    <div className={"container d-flex align-center direction-column"}>
                         <h2>GOALS</h2>
                         <div className={"goals--container"}>
                             <img src={Goal1}/>
@@ -116,7 +123,7 @@ function App() {
                             <img src={Goal16}/>
                             <img src={Goal17}/>
                         </div>
-                        <SimpleButton content={"More info"} onClick={() => window.open("https://www.un.org/sustainabledevelopment/sustainable-development-goals/")}></SimpleButton>
+                        <SimpleButton className={"cursor-extern"}  content={"More info"} onClick={() => window.open("https://www.un.org/sustainabledevelopment/sustainable-development-goals/")}></SimpleButton>
                     </div>
                 <div className={"card"}>
                     <h2>RAISING AWARENESS</h2>
@@ -138,7 +145,7 @@ function App() {
                             <CssTextField required id="standard-basic" type={"text"} multiline rows={4} name={"message"} label="Message" variant="outlined" />
                         </div>
                         <div style={{ width: "80px", float: "right", paddingRight: "40px" }}>
-                            <SendButton />
+                            <SendButton sent={sent} />
                         </div>
                     </form>
                 </div>

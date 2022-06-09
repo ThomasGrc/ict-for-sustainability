@@ -10,6 +10,9 @@
   justify-content: center
   margin-bottom: 50px
 
+.container
+  width: 90%
+
 .main--section
   width: 100vw
   height: 90vh
@@ -31,15 +34,16 @@
   box-shadow: 15px 15px 20px 0 rgba(0,0,0, 0.1), -15px -15px 20px 0 rgba(255,255,255, 0.8)
   transition: all 0.6s
 
+.card.large
+  width: 90%
+
 @media (min-width: 764px)
   .card
     padding: 5%
 
 .card:hover
   border: 3px solid #4E8A4A
-  border-radius: 50px
-  border-bottom-left-radius: 10px
-  border-top-right-radius: 10px
+  border-radius: 50px 10px 50px 10px
 
 
 .card--type1
@@ -70,9 +74,13 @@
     width: 70%
   .card
     width: 50%
+  .container
+    width: 60%
 @media (min-width: shared.$lg)
   .main--content
     width: 50%
   .card
     width: 40%
+  .container
+    width: 60%
 

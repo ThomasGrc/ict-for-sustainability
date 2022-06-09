@@ -7,7 +7,7 @@ export function Menu() {
         <div className="menu--logo">
             Grape<span>.</span>
         </div>
-        <div onClick={() => window.open("https://instagram.com/")} className="menu--instagram">
+        <div onClick={() => window.open("https://www.instagram.com/grapethehague/")} className="menu--instagram">
             INSTAGRAM <InstagramLogo />
         </div>
     </>
