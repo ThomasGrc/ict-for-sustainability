@@ -7,11 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-img {
-  width: 15%;
-  margin: 5px;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

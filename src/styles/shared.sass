@@ -16,6 +16,15 @@ a:hover
 .cursor-extern
   cursor: alias
 
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-expand
+  text-align: justify
+
 div
   font-family: junegull, sans-serif
   font-weight: 400
@@ -63,7 +72,15 @@ p
 .direction-column
   flex-direction: column
 
+img
+  width: 30%
+  margin: 5px
+
+
 @media (min-width: $md)
+  img
+    width: 20%
+    margin: 5px
   div
     color: white
   h1
@@ -72,6 +89,8 @@ p
     font-size: 16px
 
 @media (min-width: $lg)
+  img
+    width: 15%
   div
     color: white
   h1

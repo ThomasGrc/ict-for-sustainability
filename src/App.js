@@ -22,6 +22,7 @@ import Goal14 from "./goals/E-WEB-Goal-14.png"
 import Goal15 from "./goals/E-WEB-Goal-15.png"
 import Goal16 from "./goals/E-WEB-Goal-16.png"
 import Goal17 from "./goals/E-WEB-Goal-17.png"
+import {ColorElement} from "./components/ColorElement";
 
 
 const CssTextField = styled(TextField)({
@@ -97,13 +98,16 @@ function App() {
             </div>
             <div id='content-section' className={"content--container"}>
                 <div className={"card"}>
-                    <h2>Our project</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <h2>What we are trying to solve</h2>
+                    <p className={"text-expand"}>
+                        Population growth, climate change, energy needs and a high standard of living; it seems like we are exhausting our earth. The United Nations committed to 17 sustainable development goals but a lot needs to be done to get on track in achieving them. Innovation, recycling, sustainable behavior seems to be the only answer to ensure a livable future for next generations.
                     </p>
+                    <h2 className={"text-right"}>How we do it</h2>
+                    <p className={"text-expand"}>By publishing a post every week on Instagram, Grape has the goal to help people near the Hague, Netherlands, work towards these sustainable development goals by giving more exposure to sustainable organizations. We hope that communities give a try to these organizations and change their habits for more sustainable ones.</p>
                 </div>
                     <div className={"container d-flex align-center direction-column"}>
                         <h2>GOALS</h2>
+                        <p className={"text-center"}>As defined by the United Nations, there are a total of 17 sustainable development goals. These are a call for action to the inhabitant of our earth. These goals provide a shared blueprint for peace and prosperity for people and the planet, now and into the future.</p>
                         <div className={"goals--container"}>
                             <img src={Goal1}/>
                             <img src={Goal2}/>
@@ -126,10 +130,16 @@ function App() {
                         <SimpleButton className={"cursor-extern"}  content={"More info"} onClick={() => window.open("https://www.un.org/sustainabledevelopment/sustainable-development-goals/")}></SimpleButton>
                     </div>
                 <div className={"card"}>
-                    <h2>RAISING AWARENESS</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </p>
+                    <h2>How we select organizations</h2>
+                    <p className={"text-expand"}>As of now, we are exclusively focussing organization near the Hague, in the Netherlands. We select organizations that work towards one or more sustainable development goal and we try to promote as many of them as possible. But we are definitely missing quite a few of them and you think there is one that we are missing out on, do not hesitate to let us know via the contact form bellow!</p>
+                </div>
+                <div>
+                    <h2>Our colors</h2>
+                    <div className={"ourcolor--container"}>
+                        <ColorElement color={"#E51F40"} hex={"#E51F40"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"RED FOR"} boldText={"GROCERIES"}/>
+                        <ColorElement color={"#447259"} hex={"#447259"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"GREEN FOR"} boldText={"RESTAURANTS"}/>
+                        <ColorElement color={"#323759"} hex={"#323759"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"BLUE FOR"} boldText={"FASHION"}/>
+                    </div>
                 </div>
                 <div id={"contact"} className={"card"}>
                     <h2>Contact</h2>
@@ -149,7 +159,8 @@ function App() {
                         </div>
                     </form>
                 </div>
-            </div>
+
+             </div>
         </div>
     );
 }
