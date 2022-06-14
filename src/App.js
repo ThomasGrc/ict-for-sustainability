@@ -23,6 +23,7 @@ import Goal15 from "./goals/E-WEB-Goal-15.png"
 import Goal16 from "./goals/E-WEB-Goal-16.png"
 import Goal17 from "./goals/E-WEB-Goal-17.png"
 import {ColorElement} from "./components/ColorElement";
+import {Headline} from "./components/Headline";
 
 
 const CssTextField = styled(TextField)({
@@ -98,43 +99,42 @@ function App() {
             </div>
             <div id='content-section' className={"content--container"}>
                 <div className={"card"}>
-                    <h2>What we are trying to solve</h2>
+                    <Headline content={"Our project"} />
                     <p className={"text-expand"}>
-                        Population growth, climate change, energy needs and a high standard of living; it seems like we are exhausting our earth. The United Nations committed to 17 sustainable development goals but a lot needs to be done to get on track in achieving them. Innovation, recycling, sustainable behavior seems to be the only answer to ensure a livable future for next generations.
-                    </p>
-                    <h2 className={"text-right"}>How we do it</h2>
+                        Population growth, climate change, energy needs and a high standard of living; it seems like we are exhausting our earth. The United Nations committed to 17 sustainable development goals but a lot needs to be done to get on track in achieving them. Innovation, recycling, sustainable behavior seems to be the only answer to ensure a livable future for next generations.</p>
+                    <Headline left={true} content={"How we do it"} className={"text-right"}/>
                     <p className={"text-expand"}>By publishing a post every week on Instagram, Grape has the goal to help people near the Hague, Netherlands, work towards these sustainable development goals by giving more exposure to sustainable organizations. We hope that communities give a try to these organizations and change their habits for more sustainable ones.</p>
                 </div>
                     <div className={"container d-flex align-center direction-column"}>
-                        <h2>GOALS</h2>
+                        <Headline center={true} content={"GOALS"} />
                         <p className={"text-center"}>As defined by the United Nations, there are a total of 17 sustainable development goals. These are a call for action to the inhabitant of our earth. These goals provide a shared blueprint for peace and prosperity for people and the planet, now and into the future.</p>
                         <div className={"goals--container"}>
-                            <img src={Goal1}/>
-                            <img src={Goal2}/>
-                            <img src={Goal3}/>
-                            <img src={Goal4}/>
-                            <img src={Goal5}/>
-                            <img src={Goal6}/>
-                            <img src={Goal7}/>
-                            <img src={Goal8}/>
-                            <img src={Goal9}/>
-                            <img src={Goal10} />
-                            <img src={Goal11}/>
-                            <img src={Goal12}/>
-                            <img src={Goal13}/>
-                            <img src={Goal14}/>
-                            <img src={Goal15}/>
-                            <img src={Goal16}/>
-                            <img src={Goal17}/>
+                            <img src={Goal1} alt={""}/>
+                            <img src={Goal2} alt={""}/>
+                            <img src={Goal3} alt={""}/>
+                            <img src={Goal4} alt={""}/>
+                            <img src={Goal5} alt={""}/>
+                            <img src={Goal6} alt={""}/>
+                            <img src={Goal7} alt={""}/>
+                            <img src={Goal8} alt={""}/>
+                            <img src={Goal9} alt={""}/>
+                            <img src={Goal10}  alt={""}/>
+                            <img src={Goal11} alt={""}/>
+                            <img src={Goal12} alt={""}/>
+                            <img src={Goal13} alt={""}/>
+                            <img src={Goal14} alt={""}/>
+                            <img src={Goal15} alt={""}/>
+                            <img src={Goal16} alt={""}/>
+                            <img src={Goal17} alt={""}/>
                         </div>
-                        <SimpleButton className={"cursor-extern"}  content={"More info"} onClick={() => window.open("https://www.un.org/sustainabledevelopment/sustainable-development-goals/")}></SimpleButton>
+                        <SimpleButton className={"cursor-extern"}  content={"More info"} onClick={() => window.open("https://www.un.org/sustainabledevelopment/sustainable-development-goals/")}/>
                     </div>
                 <div className={"card"}>
-                    <h2>How we select organizations</h2>
+                    <Headline content={"Our choice"}/>
                     <p className={"text-expand"}>As of now, we are exclusively focussing organization near the Hague, in the Netherlands. We select organizations that work towards one or more sustainable development goal and we try to promote as many of them as possible. But we are definitely missing quite a few of them and you think there is one that we are missing out on, do not hesitate to let us know via the contact form bellow!</p>
                 </div>
-                <div>
-                    <h2>Our colors</h2>
+                <div className={"container"}>
+                    <Headline content={"Our colors"}/>
                     <div className={"ourcolor--container"}>
                         <ColorElement color={"#E51F40"} hex={"#E51F40"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"RED FOR"} boldText={"GROCERIES"}/>
                         <ColorElement color={"#447259"} hex={"#447259"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"GREEN FOR"} boldText={"RESTAURANTS"}/>

@@ -1,0 +1,42 @@
+@use 'shared'
+@use 'colors'
+
+.headlineContainer::first-line
+  text-decoration: underline colors.$primary 50%
+  text-underline-offset: -0px
+
+.headline span
+  padding-right: 10px
+  border-bottom: 10px solid colors.$primary
+  display: inline-block
+  height: 0.85em
+
+.headline.left span
+  padding-right: 0
+  padding-left: 10px
+
+.headline.center span
+  padding: 0 10px
+
+@media (min-width: shared.$md)
+  .headline span
+    padding-right: 15px
+    border-bottom: 10px solid colors.$primary
+    display: inline-block
+    height: 0.85em
+  .headline.left span
+    padding-right: 0
+    padding-left: 15px
+  .headline.center span
+    padding: 0 15px
+
+@media (min-width: shared.$lg)
+  .headline span
+    padding-right: 15px
+    border-bottom: 10px solid colors.$primary
+    display: inline-block
+    height: 0.85em
+  .headline.left span
+    padding-right: 0
+    padding-left: 15px
+
