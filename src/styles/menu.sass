@@ -2,16 +2,20 @@
 @use 'colors'
 
 .menu--logo
+    align-items: center
+    display: flex
     width: 100vw
     color: colors.$primary
-    position: sticky
     z-index: shared.$top-level
-    top: 3%
+    position: absolute
+    top: 1%
+    left: 1%
     padding-left: 30px
     font-size: 50px
 
 .menu--logo span
     color: colors.$primary
+    padding-left: 20px
 
 .menu--instagram
     display: none

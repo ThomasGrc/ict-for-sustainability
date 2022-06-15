@@ -33,6 +33,12 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #4E8A4A;    /* color of the scroll thumb */
+  background-color: #2cd51c;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+@media (max-width: 1200px) {
+  html {
+    overflow-x: hidden;
+  }
 }

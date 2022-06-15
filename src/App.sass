@@ -1,4 +1,5 @@
 @use 'styles/shared'
+@use 'styles/colors'
 
 .home--container
   min-height: 100vh
@@ -16,7 +17,6 @@
 .ourcolor--container
   display: flex
   flex-wrap: wrap
-  justify-content: space-around
   margin: 50px 0
 
 .main--section
@@ -29,6 +29,29 @@
 .main--content
   width: 90%
   max-width: shared.$maxWidth
+
+.main--content > div
+  flex-wrap: wrap
+  display: flex
+  align-items: center
+
+.newpost
+  position: absolute
+  z-index: -1
+  right: 15vw
+  top: 10vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  font-family: cubano, sans-serif
+  height: 160px
+  width: 160px
+  border-radius: 50%
+  background: colors.$primary
+
+.newpost span
+  font-size: 25px
 
 .card
   max-width: shared.$maxWidth
@@ -48,7 +71,7 @@
     padding: 5%
 
 .card:hover
-  border: 3px solid #4E8A4A
+  border: 3px solid colors.$primary
   border-radius: 50px 10px 50px 10px
 
 

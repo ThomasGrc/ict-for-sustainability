@@ -24,6 +24,7 @@ import Goal16 from "./goals/E-WEB-Goal-16.png"
 import Goal17 from "./goals/E-WEB-Goal-17.png"
 import {ColorElement} from "./components/ColorElement";
 import {Headline} from "./components/Headline";
+import {InstagramLogo} from "./components/InstagramLogo";
 
 
 const CssTextField = styled(TextField)({
@@ -79,6 +80,9 @@ function App() {
         <div className={"home--container"}>
             <div id='main-section' className='main--section'>
                 <div className={"main--content"}>
+                    <div className={"newpost"}>
+                            NEW POST EVERY <span>SUNDAY</span>
+                    </div>
                     <h3>
                         Welcome to grape
                     </h3>
@@ -94,6 +98,7 @@ function App() {
                             const el = document.getElementById("contact")
                             el.scrollIntoView()
                         }} />
+                        <InstagramLogo onClick={() => window.open("https://www.instagram.com/grapethehague/")} className={"pure"} />
                     </div>
                 </div>
             </div>
@@ -101,9 +106,9 @@ function App() {
                 <div className={"card"}>
                     <Headline content={"Our project"} />
                     <p className={"text-expand"}>
-                        Population growth, climate change, energy needs and a high standard of living; it seems like we are exhausting our earth. The United Nations committed to 17 sustainable development goals but a lot needs to be done to get on track in achieving them. Innovation, recycling, sustainable behavior seems to be the only answer to ensure a livable future for next generations.</p>
+                        Population growth, climate change, energy needs and a high standard of living; it seems like we are exhausting our earth. The United Nations committed to <span className={"highlight"}>17 sustainable development goals</span> but a lot needs to be done to get on track in achieving them. Innovation, recycling, sustainable behavior seems to be the only answer to ensure a livable future for next generations.</p>
                     <Headline left={true} content={"How we do it"} className={"text-right"}/>
-                    <p className={"text-expand"}>By publishing a post every week on Instagram, Grape has the goal to help people near the Hague, Netherlands, work towards these sustainable development goals by giving more exposure to sustainable organizations. We hope that communities give a try to these organizations and change their habits for more sustainable ones.</p>
+                    <p className={"text-expand"}>By publishing a post every week on Instagram, <span className={"highlight"}>Grape</span> has the goal to help people near the Hague, Netherlands, work towards these sustainable development goals by giving more exposure to sustainable organizations. We hope that communities give a try to these organizations and change their habits for more sustainable ones.</p>
                 </div>
                     <div className={"container d-flex align-center direction-column"}>
                         <Headline center={true} content={"GOALS"} />
@@ -131,14 +136,15 @@ function App() {
                     </div>
                 <div className={"card"}>
                     <Headline content={"Our choice"}/>
-                    <p className={"text-expand"}>As of now, we are exclusively focussing organization near the Hague, in the Netherlands. We select organizations that work towards one or more sustainable development goal and we try to promote as many of them as possible. But we are definitely missing quite a few of them and you think there is one that we are missing out on, do not hesitate to let us know via the contact form bellow!</p>
+                    <p className={"text-expand"}>As of now, we are exclusively focussing organization near the Hague, in the Netherlands. We select organizations that work towards one or more sustainable development goal and we try to promote as many of them as possible. But we are definitely missing quite a few of them, and if you think there is one that we are missing out on, do not hesitate to let us know via the <span className={"highlight"}>contact form</span> bellow!</p>
                 </div>
                 <div className={"container"}>
                     <Headline content={"Our colors"}/>
+                    <p>Theses are the colors we use in order to categorize organisations that we bring to you.</p>
                     <div className={"ourcolor--container"}>
                         <ColorElement color={"#E51F40"} hex={"#E51F40"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"RED FOR"} boldText={"GROCERIES"}/>
-                        <ColorElement color={"#447259"} hex={"#447259"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"GREEN FOR"} boldText={"RESTAURANTS"}/>
-                        <ColorElement color={"#323759"} hex={"#323759"} cmy={"C 0 | M 96 | Y 66 | K 0"} title={"BLUE FOR"} boldText={"FASHION"}/>
+                        <ColorElement color={"#447259"} hex={"#447259"} cmy={"C 74 | M 34 | Y 67 | K 22"} title={"GREEN FOR"} boldText={"RESTAURANTS"}/>
+                        <ColorElement color={"#323759"} hex={"#323759"} cmy={"C 89 | M 78 | Y 37 | K 32"} title={"BLUE FOR"} boldText={"FASHION"}/>
                     </div>
                 </div>
                 <div id={"contact"} className={"card"}>
