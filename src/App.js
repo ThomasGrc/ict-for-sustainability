@@ -24,7 +24,6 @@ import Goal16 from "./goals/E-WEB-Goal-16.png"
 import Goal17 from "./goals/E-WEB-Goal-17.png"
 import {ColorElement} from "./components/ColorElement";
 import {Headline} from "./components/Headline";
-import {InstagramLogo} from "./components/InstagramLogo";
 
 
 const CssTextField = styled(TextField)({
