@@ -12,9 +12,9 @@ export function GrapeLogo() {
         <path stroke-miterlimit="10" d="M460.273,318.104c0,0-0.162,0.272-0.326,0.548
 			c-17.972,29.966-49.28,44.572-69.932,32.626c-20.65-11.948-22.825-45.928-4.852-75.895c17.972-29.965,49.281-44.572,69.936-32.625
 			c14.656,8.481,20.002,28.057,15.448,49.42" style={{fillRule: "nonzero", stroke: "rgb(104, 104, 104)", strokeWidth: "6.25423px"}} fill="none"></path>
-        <path fill="none" stroke-miterlimit="10" x1="448.983" y1="311.06" x2="462.984" y2="319.663" style={{strokeWidth: "6.25423px", stroke: "rgb(104, 104, 104)"}}></path>
+        <path fill="none" stroke-miterlimit="10" x1="448.983" y1="311.06" x2="462.984" y2="319.663" style={{strokeWidth: "6.25423px", stroke: "#686868"}}></path>
     </g>
-</g>
+            <line fill="none" stroke="#686868" stroke-width="5" stroke-miterlimit="10" x1="447.343" y1="310.616" x2="461.344" y2="319.219"></line>
+        </g>
 </svg>
 }
-

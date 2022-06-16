@@ -98,7 +98,6 @@ function App() {
                             const el = document.getElementById("contact")
                             el.scrollIntoView()
                         }} />
-                        <InstagramLogo onClick={() => window.open("https://www.instagram.com/grapethehague/")} className={"pure"} />
                     </div>
                 </div>
             </div>
